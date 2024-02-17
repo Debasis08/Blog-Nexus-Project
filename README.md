@@ -1,8 +1,6 @@
-# React + Vite
+"Blog Nexus"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It is already self-evident that it is a Blogging website for people uploading their blogs.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+There are some technical features to be added
+i.e. user authentication, text editor, etc.
