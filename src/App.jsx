@@ -1,8 +1,9 @@
-import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import authService from "./appwrite/auth"
 import {login, logout} from "./store/authSlice"
+import {Header,Footer} from './components'
+import { Outlet } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -23,7 +24,15 @@ function App() {
   }, [dispatch])
 
   return !loading ? (
-    <div> </div>
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main>
+         Hey {/* <Outlet /> */}
+        </main>
+        <Footer />
+      </div>
+    </div>
   ) : null
 }
 
