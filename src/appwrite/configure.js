@@ -1,8 +1,8 @@
-import config from '../config.js';
+import config from '../config/config';
 import { Client, Databases, ID, Storage, Query} from "appwrite";
 
 export class Service{
-    client = new this.client();
+    client = new Client();
     databases;
     bucket;
 
