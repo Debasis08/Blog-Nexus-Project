@@ -8,10 +8,10 @@ import { useSelector } from 'react-redux'
 export default function PostForm({post}) {
     const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
         defaultValues: {
-            title: post ?.title || "",
-            slug: post ?.$id || "",
-            content: post ?.content || "",
-            status: post ?.status || "active",
+            title: post?.title || "",
+            slug: post?.$id || "",
+            content: post?.content || "",
+            status: post?.status || "active",
         },
     });
 
@@ -114,7 +114,7 @@ export default function PostForm({post}) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full hover:bg-blue-700">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>
