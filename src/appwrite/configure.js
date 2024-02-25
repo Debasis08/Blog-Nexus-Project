@@ -123,7 +123,7 @@ export class Service{
         return this.bucket.getFilePreview(
             config.appwriteBucketId,
             fileId
-        )
+        );
     }
 }
 
