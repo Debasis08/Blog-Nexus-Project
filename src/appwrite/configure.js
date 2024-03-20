@@ -21,11 +21,11 @@ export class Service{
                 config.appwriteCollectionId,
                 slug,
                 {
-                    Title: title,
-                    Content: content,
-                    FeaturedImage: featuredImage,
-                    Status: status,
-                    Userid: userId,
+                    title,
+                    content,
+                    featuredImage,
+                    status,
+                    userId,
                 }
             )
         } catch (error) {
@@ -40,10 +40,10 @@ export class Service{
                 config.appwriteCollectionId,
                 slug,
                 {
-                    Title: title,
-                    Content: content,
-                    FeaturedImage: featuredImage,
-                    Status: status,
+                    title,
+                    content,
+                    featuredImage,
+                    status,
                 }
             )
         } catch (error) {
@@ -122,7 +122,8 @@ export class Service{
     getFilePreview(fileId){
         return this.bucket.getFilePreview(
             config.appwriteBucketId,
-            fileId
+            fileId,
+        console.log("Hey")
         );
     }
 }
