@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.footer-container {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 1025px) {
+    .footer-container {
+        position: relative;
+    }
+}
+
+@media (min-width: 770) {
+  .footer-container {
+      position: fixed;
+  }
+}
