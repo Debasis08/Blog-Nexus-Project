@@ -5,6 +5,7 @@ import appwriteService from "../../appwrite/configure"
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
+
 export default function PostForm({post}) {
     const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
         defaultValues: {
@@ -77,13 +78,13 @@ export default function PostForm({post}) {
                 <Input
                     label="Title :"
                     placeholder="Title"
-                    className="mb-4"
+                    className="mb-4 bg-slate-700"
                     {...register("title", { required: true })}
                 />
                 <Input
                     label="Slug :"
                     placeholder="Slug"
-                    className="mb-4"
+                    className="mb-4 bg-slate-700"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
@@ -91,14 +92,17 @@ export default function PostForm({post}) {
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
-                <Input
-                    label="Featured Image :"
+            <div className="w-1/3 px-2 mt-7">
+
+                
+                <input
+                    label = "Tap to Upload"                
                     type="file"
-                    className="mb-4"
+                    className="mb-4 rounded-lg"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
+            
                 {post && (
                     <div className="w-full mb-4">
                         <img
@@ -111,11 +115,11 @@ export default function PostForm({post}) {
                 <Select
                     options={["active", "inactive"]}
                     label="Status"
-                    className="mb-4"
+                    className="mb-4 bg-slate-300"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full hover:bg-blue-700">
-                    {post ? "Update" : "Submit"}
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full hover:bg-pink-700">
+                    {post ? "Update" : "Post"}
                 </Button>
             </div>
         </form>
