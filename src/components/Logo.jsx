@@ -2,9 +2,7 @@ import React from 'react'
 
 function Logo({width='100px'}) {
   return (
-    <image to="https://cdn-icons-png.flaticon.com/512/6819/6819083.png">
-    hey
-    </image>
+    <img className="rounded-2xl w-42 h-24 cursor-pointer" src="../../image/logo.png" alt="Logo Image"/>
   )
 }
 
