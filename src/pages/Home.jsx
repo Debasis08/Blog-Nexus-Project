@@ -19,8 +19,8 @@ export default function Home() {
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold hover:text-gray-500">
-                                Login to read posts
+                            <h1 className=" text-6xl text-theme-400 font-bold hover:text-indigo-950">
+                                Kindly login to read Posts
                             </h1>
                         </div>
                     </div>
@@ -30,9 +30,9 @@ export default function Home() {
     }
 
     return (
-    <div className='w-full py-8'>
+    <div className='w-full py-8 overflow-auto'>
         <Container>
-                <div className='flex flex-wrap'>
+                <div className='flex flex-wrap overflow-auto'>
                     {posts.map((post) => (
                         <div key={post.$id} className='p-2 w-1/4'>
                             <PostCard {...post} />

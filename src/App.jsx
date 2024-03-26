@@ -24,15 +24,18 @@ function App() {
   }, [])
 
   return !loading ? (
-    <div className='shadow-2xl shadow-pink-800 min-h-screen rounded-2xl flex flex-wrap content-between bg-slate-800'>
+    <div className='min-h-screen rounded-2xl flex bottom-0 w-screen flex-col content-between bg-theme-100'>
+      <Header />
       <div className='w-full h-full block'>
-        <Header />
+        
         <main>
          <Outlet />
         </main>
-        <Footer />
+        
       </div>
+    <Footer />
     </div>
+    
   ) : null
 }
 

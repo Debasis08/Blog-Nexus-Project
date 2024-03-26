@@ -37,7 +37,7 @@ function Header() {
   ]
 
   return (
-    <header className='bg-gradient-to-r from-rose-700 to-fuchsia-900 text-white px-6 py-4 rounded-lg text-xl font-bold'>
+    <header className='bg-theme-300 border-b-4 border-x-indigo-950 text-white rounded-lg text-xl sticky top-0 z-10 font-bold'>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>
@@ -46,13 +46,13 @@ function Header() {
 
           </Link>
           </div>
-          <ul className='flex ml-auto'>
+          <ul className='ml-auto flex items-center '>
             {navItems.map((item) =>
             item.active ? (
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-block px-6 py-2 duration-200 hover:bg-fuchsia-800 rounded-full'>
+                className='my-auto px-6 py-3 duration-200 bg-theme-300 hover:bg-gradient-to-tl from-theme-300 to-theme-200 hover:text-white hover:text-2xl rounded-full'>
                   {item.name}
                 </button>
               </li>
