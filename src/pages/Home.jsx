@@ -28,15 +28,18 @@ export default function Home() {
 
             if (!authStatus) {
                 return (
+                <div>
                 <Container>
-                    <div className="flex flex-wrap">
-                        <div className="p-2 w-full">
+                    <div>
+                        <div className="p-2 w-full text-center">
                             <h1 className=" text-6xl text-theme-400 font-bold hover:text-indigo-950">
                                 Kindly login to read Posts
                             </h1>
                         </div>
                     </div>
-                </Container>)
+                </Container>
+                </div>
+                )
             } else if (posts.length===0) {
                 return (
                     <div className='flex justify-center'>
