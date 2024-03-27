@@ -10,6 +10,17 @@ export default function AllPosts() {
             setPosts(posts.documents)
         }
     })
+
+    if (posts.length===0) {
+      return (
+          <div className='flex justify-center'>
+            <div className='text-2xl text-theme-400 hover:text-opacity-90'>
+            Not a single post in NEXUS BLOG 😱 <br/><br/><br/>
+            Hey Start your journey by adding Posts !!
+            </div>
+          </div>
+      )
+  } else {
   return (
     <div className='w-full py-8'>
       <Container>
@@ -23,4 +34,5 @@ export default function AllPosts() {
       </Container>
     </div>
   )
+}
 }
