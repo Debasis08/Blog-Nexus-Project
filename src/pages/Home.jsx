@@ -16,22 +16,12 @@ export default function Home() {
         })
     }, [])
 
-    // if (!authStatus || posts.length===0) {
-    //     return (
-            
-    //         <div className="w-full py-8 mt-4 text-center">
-
-    //         <div className='text-2xl text-theme-400 hover:text-opacity-90'>
-    //             Not a single post in NEXUS BLOG 😱 <br/><br/><br/>
-    //             Hey Start your journey by adding Posts !!
-    //         </div>
-
             if (!authStatus) {
                 return (
                 <div>
                 <Container>
                     <div>
-                        <div className="p-2 w-full text-center">
+                        <div className="p-5 w-full text-center">
                             <h1 className=" text-6xl text-theme-400 font-bold hover:text-indigo-950">
                                 Kindly login to read Posts
                             </h1>
@@ -49,10 +39,10 @@ export default function Home() {
                         </div>
                     </div>
                 )
-            }
+            } else {
 
     return (
-    <div className='w-full py-8 overflow-auto bg-indigo-950'>
+    <div className='w-full py-8 overflow-auto bg-theme-400'>
         <Container>
                 <div className='flex flex-wrap overflow-auto'>
                     {posts.map((post) => (
@@ -64,4 +54,5 @@ export default function Home() {
         </Container>
     </div>
     )
+}
 }

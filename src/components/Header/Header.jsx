@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <header className='bg-theme-300 border-b-4 border-x-indigo-950 text-white rounded-lg text-xl sticky top-0 z-10 font-bold'>
-      <Container>
+      {/* <Container> */}
         <nav className='flex'>
           <div className='mr-4'>
           <Link to='/'>
@@ -65,7 +65,7 @@ function Header() {
             )}
           </ul>
         </nav>
-      </Container>
+      {/* </Container> */}
     </header>
   )
 }
