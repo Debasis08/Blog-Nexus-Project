@@ -16,13 +16,17 @@ export default function Home() {
         })
     }, [])
 
+    const midIndex = Math.ceil(posts.length / 2);
+    const cardsColumn1 = posts.slice(0, midIndex);
+    const cardsColumn2 = posts.slice(midIndex);
+
             if (!authStatus) {
                 return (
-                <div>
+                <div className='h-full'>
                 <Container>
-                    <div>
-                        <div className="p-5 w-full text-center">
-                            <h1 className=" text-6xl text-theme-400 font-bold hover:text-indigo-950">
+                    <div className='w-full'>
+                        <div className="py-24 w-full h-64 text-center">
+                            <h1 className="text-xl text-theme-400 font-bold hover:text-indigo-950">
                                 Kindly login to read Posts
                             </h1>
                         </div>
@@ -32,10 +36,12 @@ export default function Home() {
                 )
             } else if (posts.length===0) {
                 return (
-                    <div className='flex justify-center'>
-                        <div className='text-2xl text-theme-400 hover:text-opacity-90'>
-                        Not a single post in NEXUS BLOG 😱 <br/><br/><br/>
-                        Hey Start your journey by adding Posts !!
+                    <div className='flex flex-col text-center '>
+                        <div className='text-2xl font-bold top-0 text-theme-400 hover:text-opacity-90'>
+                        A Few Moments....
+                        </div>
+                        <div className='text-sm font-normal text-theme-300 '>
+                        (Blogs will show up if there are any)
                         </div>
                     </div>
                 )
@@ -44,9 +50,16 @@ export default function Home() {
     return (
     <div className='w-full py-8 overflow-auto bg-theme-400'>
         <Container>
-                <div className='flex flex-wrap overflow-auto'>
-                    {posts.map((post) => (
-                        <div key={post.$id} className='p-2 w-1/4'>
+                <div className='px-4 grid items-start xl:grid-cols-4 md:grid-cols-3 gap-3 grid-cols-1'>
+                    {cardsColumn1.map((post) => (
+                        <div key={post.$id} className='rounded-xl bg-theme-400'>
+                            <PostCard {...post} />
+                        </div>
+                    ))}
+                </div>
+                <div className='grid items-start xl:grid-cols-4 md:grid-cols-3 gap-3 grid-cols-1'>
+                    {cardsColumn2.map((post) => (
+                        <div key={post.$id} className='rounded-xl bg-theme-300'>
                             <PostCard {...post} />
                         </div>
                     ))}

@@ -11,27 +11,40 @@ export default function AllPosts() {
         }
     })
 
+    const midIndex = Math.ceil(posts.length / 2);
+    const cardsColumn1 = posts.slice(0, midIndex);
+    const cardsColumn2 = posts.slice(midIndex);
+
     if (posts.length===0) {
       return (
-          <div className='flex justify-center'>
-            <div className='text-2xl text-theme-400 hover:text-opacity-90'>
-            Not a single post in NEXUS BLOG 😱 <br/><br/><br/>
-            Hey Start your journey by adding Posts !!
+          <div className='flex flex-col text-center '>
+            <div className='text-2xl font-bold top-0 text-theme-400 hover:text-opacity-90'>
+            A Few Moments....
+            </div>
+            <div className='text-sm font-normal text-theme-300 '>
+            (Blogs will show up if there are any)
             </div>
           </div>
       )
   } else {
   return (
-    <div className='w-full py-8'>
-      <Container>
-        <div className='flex flex-wrap'>
-            {posts.map((post) => (
-                <div key={post.$id} className='p-2 w-1/4'>
-                    <PostCard {...post} />
+    <div className='w-full py-8 overflow-auto bg-theme-400'>
+        <Container>
+                <div className='px-4 grid items-start xl:grid-cols-4 md:grid-cols-3 gap-3 grid-cols-1'>
+                    {cardsColumn1.map((post) => (
+                        <div key={post.$id} className='rounded-xl bg-theme-400'>
+                            <PostCard {...post} />
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </div>
-      </Container>
+                <div className='grid items-start xl:grid-cols-4 md:grid-cols-3 gap-3 grid-cols-1'>
+                    {cardsColumn2.map((post) => (
+                        <div key={post.$id} className='rounded-xl bg-theme-300'>
+                            <PostCard {...post} />
+                        </div>
+                    ))}
+                </div>
+        </Container>
     </div>
   )
 }

@@ -36,7 +36,7 @@ export default function Post() {
         <div className="bg-theme-400 min-h-screen py-10">
             <Container>
             
-                <div className=" bg-theme-200 mr-3 inline-block w-1/4 h-1/3 shadow-2xl rounded-2xl ">
+                <div className=" bg-theme-200 mr-3 w-1/4 h-1/3 shadow-2xl rounded-2xl ">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
@@ -45,7 +45,7 @@ export default function Post() {
                     
                 </div>
 
-                <div className=" w-2/3 border-4 border-white relative bg-theme-300 p-5 shadow-2xl rounded-lg group">
+                <div className=" w-2/3 border-4 text-white border-white relative bg-indigo-950 p-5 shadow-2xl rounded-lg group">
                 {isAuthor && (
                         <div className="bg-theme-200 flex justify-center absolute top-0 left-0 m-0 w-28 h-11 opacity-0 group-hover:opacity-70 rounded-lg">
                             <Link to={`/edit-post/${post.$id}`}>

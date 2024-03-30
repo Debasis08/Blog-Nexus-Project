@@ -37,22 +37,22 @@ function Header() {
   ]
 
   return (
-    <header className='bg-theme-300 border-b-4 border-x-indigo-950 text-white rounded-lg text-xl sticky top-0 z-10 font-bold'>
+    <header className='md:h-40 h-20 z-40 bg-theme-300 border-b-4 border-white text-theme-400 rounded-lg sticky top-0 font-bold'>
       {/* <Container> */}
         <nav className='flex'>
-          <div className='mr-4'>
+          <div className=' md:w-48 md:mt-6 md:ml-8 md:my-auto mr-4 ml-2 flex-none w-28 h-22'>
           <Link to='/'>
             <Logo width='70px' />
 
           </Link>
           </div>
-          <ul className='ml-auto flex items-center '>
+          <ul className= 'md:w-3/5 ml-auto flex items-end'>
             {navItems.map((item) =>
             item.active ? (
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='my-auto px-6 py-3 duration-200 bg-theme-300 hover:bg-gradient-to-tl from-theme-300 to-theme-200 hover:text-white hover:text-2xl rounded-full'>
+                className='md:text-lg md:w-24 my-auto md:mr-2 text-xs px-2 py-2 duration-200 bg-theme-300 hover:bg-gradient-to-tl from-theme-300 to-theme-200 hover:text-white hover:text-sm md:hover:text-xl rounded-2xl focus:underline outline-none'>
                   {item.name}
                 </button>
               </li>

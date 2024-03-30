@@ -4,30 +4,19 @@ import Logo from '../Logo'
 
 function Footer() {
   return (
-    <section className=" z-10 footer-container absolute overflow-hidden mt-auto py-3 bg-theme-300 border-t-4 bottom-0 border-white rounded-lg">
-            <div className="relative z-10 mx-auto max-w-7xl px-2">
-                <div className="-m-6 flex flex-wrap">
-                    <div className="w-full p-6 md:w-1/2 lg:w-5/12">
-                        <div className="flex h-full flex-col justify-between">
-                            <div className="mb-4 inline-flex items-center">
-                                <Logo width="100px" />
-                            </div>
-                            <div>
-                                <p className="text-lg text-black">
-                                    &copy; Copyright 2023. All Rights Reserved by Developer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-s font-bold uppercase">
+    <section className=" md:w-full md:h-60 md:overflow-x-auto overflow-hidden mt-auto py-3 bg-theme-300 border-t-4 bottom-0 border-white rounded-lg">
+            <div className="mx-auto max-w-7xl px-2">
+                <div className="m-3 flex flex-wrap md:flex-no-wrap">
+                    
+                    <div className="flex w-full md:w-1/2">
+                        <div className="h-full w-1/2">
+                            <h3 className="tracking-px text-center mb-9 md:mb-3 md:mt-8 text-sm font-semibold uppercase">
                                 Company
                             </h3>
-                            <ul>
+                            <ul className=' text-sm text-center'>
                                 <li className="mb-2">
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=""
                                         to="/"
                                     >
                                         Features
@@ -35,7 +24,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=" "
                                         to="/"
                                     >
                                         Pricing
@@ -43,7 +32,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=" "
                                         to="/"
                                     >
                                         Affiliate Program
@@ -51,7 +40,7 @@ function Footer() {
                                 </li>
                                 <li>
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=""
                                         to="/"
                                     >
                                         Press Kit
@@ -59,16 +48,15 @@ function Footer() {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-s font-bold uppercase">
+                    
+                        <div className="h-full w-1/2">
+                            <h3 className="tracking-px md:mb-3 md:mt-8 mb-9 text-s text-center font-semibold uppercase">
                                 Support
                             </h3>
-                            <ul>
-                                <li className="mb-2">
+                            <ul className="text-sm text-center">
+                                <li className='mb-2'>
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=""
                                         to="/"
                                     >
                                         Account
@@ -76,7 +64,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=""
                                         to="/"
                                     >
                                         Help
@@ -84,7 +72,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-2">
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=""
                                         to="/"
                                     >
                                         Contact Us
@@ -92,7 +80,7 @@ function Footer() {
                                 </li>
                                 <li>
                                     <Link
-                                        className=" text-base font-medium"
+                                        className=""
                                         to="/"
                                     >
                                         Customer Support
@@ -101,32 +89,45 @@ function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-3/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-s font-bold uppercase">
+                    <div className="w-full md:w-1/2 flex mt-14 md:mt-0">
+                        <div className="h-full w-1/2">
+                            <h3 className="tracking-px md:mb-3 md:mt-8 mb-9 text-s text-center font-semibold uppercase">
                                 Legals
                             </h3>
-                            <ul>
+                            <ul className='text-sm text-center text-medium'>
                                 <li className="mb-2">
-                                    <Link className=" text-base font-medium"
+                                    <Link
                                         to="/"
                                     >
                                         Terms &amp; Conditions
                                     </Link>
                                 </li>
                                 <li className="mb-2">
-                                    <Link className=" text-base font-medium"
+                                    <Link
                                         to="/">                                    
                                         Privacy Policy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className=" text-base font-medium"
+                                    <Link
                                         to="/">                                    
                                         Licensing
                                     </Link>
                                 </li>
                             </ul>
+                        </div>
+
+                        <div className="flex h-full w-1/2 flex-col text-center">
+                            <div className="mb-4 mx-auto w-28 md:w-40 flex justify-center">
+                                <Link to='/'>
+                                    <Logo/>
+                                </Link>
+                            </div>
+                            <div>
+                                <p className="text-sm md:text-xs text-black">
+                                    &copy; Copyright 2023. All Rights Reserved by Developer.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
