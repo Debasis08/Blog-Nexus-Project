@@ -4,11 +4,11 @@ import Logo from '../Logo'
 
 function Footer() {
   return (
-    <section className=" md:w-full md:h-60 md:overflow-x-auto overflow-hidden mt-auto py-3 bg-theme-300 border-t-4 bottom-0 border-white rounded-lg">
+    <section className=" md:w-full md:h-60 overflow-hidden mt-auto py-3 bg-theme-300 border-t-4 bottom-0 border-white rounded-lg">
             <div className="mx-auto max-w-7xl px-2">
-                <div className="m-3 flex flex-wrap md:flex-no-wrap">
+                <div className=" lg:m-0 m-3 lg:items-center flex flex-wrap md:flex-no-wrap">
                     
-                    <div className="flex w-full md:w-1/2">
+                    <div className="flex lg:items-center w-full md:w-1/2">
                         <div className="h-full w-1/2">
                             <h3 className="tracking-px text-center mb-9 md:mb-3 md:mt-8 text-sm font-semibold uppercase">
                                 Company
@@ -117,7 +117,7 @@ function Footer() {
                             </ul>
                         </div>
 
-                        <div className="flex h-full w-1/2 flex-col text-center">
+                        <div className="flex h-full w-1/2 flex-col lg:mt-5 text-center">
                             <div className="mb-4 mx-auto w-28 md:w-40 flex justify-center">
                                 <Link to='/'>
                                     <Logo/>

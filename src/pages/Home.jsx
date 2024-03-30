@@ -48,18 +48,18 @@ export default function Home() {
             } else {
 
     return (
-    <div className='w-full py-8 overflow-auto bg-theme-400'>
+    <div className='w-full p-8 py-5 overflow-auto bg-theme-400'>
         <Container>
-                <div className='px-4 grid items-start xl:grid-cols-4 md:grid-cols-3 gap-3 grid-cols-1'>
+                <div className='grid w-1/2 md:pr-2 pr-2 gap-5 md:gap-5 grid-cols-1'>
                     {cardsColumn1.map((post) => (
-                        <div key={post.$id} className='rounded-xl bg-theme-400'>
+                        <div key={post.$id} className=' bg-theme-200 rounded-xl'>
                             <PostCard {...post} />
                         </div>
                     ))}
                 </div>
-                <div className='grid items-start xl:grid-cols-4 md:grid-cols-3 gap-3 grid-cols-1'>
+                <div className='grid w-1/2 h-full pl-2 gap-5 md:gap-5 grid-cols-1'>
                     {cardsColumn2.map((post) => (
-                        <div key={post.$id} className='rounded-xl bg-theme-300'>
+                        <div key={post.$id} className='rounded-xl '>
                             <PostCard {...post} />
                         </div>
                     ))}

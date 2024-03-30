@@ -100,7 +100,7 @@ export default function PostForm({post}) {
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
 
-            <div className="w-1/3 px-2 mt-7">
+            <div className="w-1/3 md:pt-56 px-2 mt-7">
                 
                 {post && (
                     <div className="w-full mb-4">
