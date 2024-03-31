@@ -22,15 +22,13 @@ export default function Home() {
 
             if (!authStatus) {
                 return (
-                <div className='h-full'>
+                <div className='h-full  flexheight w-full'>
                 <Container>
-                    <div className='w-full'>
-                        <div className="py-24 w-full h-64 text-center">
-                            <h1 className="text-xl text-theme-400 font-bold hover:text-indigo-950">
-                                Kindly login to read Posts
+                        <div className=" my-auto text-center bg-indigo-950 h-full  ">
+                            <h1 className="text-xl md:text-4xl text-theme-400 font-bold hover:text-indigo-950">
+                                Kindly Login to Read Posts
                             </h1>
                         </div>
-                    </div>
                 </Container>
                 </div>
                 )
@@ -48,7 +46,7 @@ export default function Home() {
             } else {
 
     return (
-    <div className='w-full p-8 py-5 overflow-auto bg-theme-400'>
+    <div className='w-full p-8 py-5  overflow-auto bg-theme-400'>
         <Container>
                 <div className='grid w-1/2 md:pr-2 pr-2 gap-5 md:gap-5 grid-cols-1'>
                     {cardsColumn1.map((post) => (
@@ -57,7 +55,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                <div className='grid w-1/2 h-full pl-2 gap-5 md:gap-5 grid-cols-1'>
+                <div className='grid w-1/2 h-full pl-2 0 gap-5 md:gap-5 grid-cols-1'>
                     {cardsColumn2.map((post) => (
                         <div key={post.$id} className='rounded-xl '>
                             <PostCard {...post} />

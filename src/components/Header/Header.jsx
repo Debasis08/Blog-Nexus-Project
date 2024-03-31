@@ -51,7 +51,7 @@ function Header() {
             <span><Link to='/'> NEXUS BLOG</Link></span>
           </div>
           </div>
-          <ul className= 'lg:w-2/5 md:w-3/5  ml-auto flex items-end'>
+          <ul className= 'lg:w-3/6 md:w-3/5 ml-auto flex items-end'>
             {navItems.map((item) =>
             item.active ? (
               <li key={item.name}>
