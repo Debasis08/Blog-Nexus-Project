@@ -17,7 +17,7 @@ export default function AllPosts() {
 
     if (posts.length===0) {
       return (
-          <div className='flex flex-col text-center '>
+          <div className='flex flex-col md:pt-20 lg:pt-40 pt-10 text-center '>
             <div className='text-2xl font-bold top-0 text-theme-400 hover:text-opacity-90'>
             A Few Moments....
             </div>
@@ -29,16 +29,16 @@ export default function AllPosts() {
       )
   } else {
   return (
-    <div className='w-full p-8 py-8 overflow-auto bg-theme-400'>
+    <div className='w-full lg:p-10 flex justify-center md:pl-56 p-8 overflow-auto bg-theme-400'>
         <Container>
-                <div className='grid w-1/2 pr-2 gap-3 md:gap-5 grid-cols-1'>
+                <div className='grid w-1/2 pr-2 xl:pr-6 gap-3 xl:gap-8 md:gap-5 grid-cols-1'>
                     {cardsColumn1.map((post) => (
                         <div key={post.$id} className='rounded-xl'>
                             <PostCard {...post} />
                         </div>
                     ))}
                 </div>
-                <div className='grid w-1/2 h-full pl-2 gap-3 md:gap-5 grid-cols-1'>
+                <div className='grid w-1/2 h-full pl-2 xl:pl-6 gap-3 xl:gap-10 md:gap-5 grid-cols-1'>
                     {cardsColumn2.map((post) => (
                         <div key={post.$id} className='rounded-xl'>
                             <PostCard {...post} />

@@ -36,7 +36,7 @@ export default function Post() {
         <div className="bg-theme-400 flex flex-col min-h-screen py-10">
             {/* <Container> */}
             
-                <div className=" bg-theme-200 w-2/3 mx-auto shadow-2xl rounded-2xl ">
+                <div className=" bg-theme-300 w-2/3 mx-auto shadow-2xl shadow-theme-300 rounded-2xl ">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
@@ -45,24 +45,28 @@ export default function Post() {
                     
                 </div>
 
-                <div className="w-4/5 text-black mt-10 mx-auto font-thin border-white relativev bg-gradient-to-br from-theme-300 to-white p-5 shadow-2xl rounded-lg group">
+                <div className="w-4/5 text-black mt-10 mx-auto font-thin border-white relativev bg-gradient-to-br from-theme-400 to-white shadow-2xl shadow-theme-300 drop-shadow-2xl rounded-lg group">
                 {isAuthor && (
-                        <div className="bg-theme-200 flex justify-center z-50 absolute top-0 left-0 m-0 w-28 h-11 opacity-0 group-hover:opacity-70 rounded-lg">
+                    <div className="absolute z-20">
+                        <div className="group-hover:inline-block h-0 hidden">
                             <Link to={`/edit-post/${post.$id}`}>
-                                <Button className=" bg-theme-100 bg-opacity-0 hover:bg-theme-400 rounded-xl">
+                                <Button className="bg-opacity-0 hover:bg-opacity-40 hover:bg-theme-400">
                                     ✏️
                                 </Button>
                             </Link>
-                                <Button className="bg-theme-100 bg-opacity-0 hover:bg-theme-400 rounded-xl" onClick={deletePost}>
+                        </div>
+                        <div className="group-hover:inline-block h-0 bg-theme-400 hidden ">
+                                <Button className="bg-opacity-0 hover:bg-opacity-40 hover:bg-theme-400" onClick={deletePost}>
                                     🗑️
                                 </Button>
                         </div>
+                    </div>
                     )}
-                <div className="w-full mb-6 flex justify-center">
-                    <h1 className="text-2xl font-medium">{post.title}</h1>
+                <div className="z-10 w-full mb-6  pt-5 relative text-center group">
+                    <h1 className="xl:text-3xl text-2xl font-medium">{post.title}</h1>
                 </div>
                 
-                <div className="browser-css font-light h-auto font-sans">
+                <div className="xl:text-xl browser-css reltive p-5 text-center font-normal h-auto font-sans group-hover:opacity-70">
                     {parse(post.content)}
                 </div>
                 </div>

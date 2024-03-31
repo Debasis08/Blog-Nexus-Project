@@ -8,7 +8,7 @@
     width: 100%;
   } */
 
-  @media (max-width: 1025px) {
+  /* @media (max-width: 1025px) {
     .footer-container {
         position: relative;
     }
@@ -18,7 +18,7 @@
   .footer-container {
       position: fixed;
   }
-}
+} */
 
 label {
   color: #424874;
